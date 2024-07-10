@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fast Money MZ</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Página de Login -->
+    <div class="container" id="loginContainer">
+        <h2>Login - Fast Money MZ</h2>
+        <form id="loginForm">
+            <label for="telefoneLogin">Número de Telefone Moçambicano (+258)</label>
+            <input type="tel" id="telefoneLogin" name="telefoneLogin" required pattern="[+]258[0-9]{9}">
+            
+            <label for="senhaLogin">Senha</label>
+            <input type="password" id="senhaLogin" name="senhaLogin" required minlength="6">
+            
+            <button type="submit">Login</button>
+        </form>
+        <p>Não tem conta? <a href="#" id="cadastroLink">Cadastre-se aqui</a></p>
+    </div>
+
+    <!-- Dashboard do Usuário -->
+    <div class="container" id="dashboardContainer" style="display: none;">
+        <h2>Dashboard - Fast Money MZ</h2>
+        <p>ID: <span id="userID">12345</span></p>
+        <p>Saldo: <span id="saldo">$0.00</span></p>
+
+        <div id="opcoesInvestimento">
+            <!-- Opções de investimento serão adicionadas dinamicamente via JavaScript -->
+        </div>
+
+        <form id="investimentoForm">
+            <label for="valorInvestimento">Digite o valor que deseja investir (mínimo $200)</label>
+            <input type="number" id="valorInvestimento" name="valorInvestimento" min="200" required>
+            <button type="submit">Investir</button>
+        </form>
+
+        <p>Para levantar lucros, clique <a href="https://wa.link/4h5h0w" target="_blank">aqui</a>.</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
